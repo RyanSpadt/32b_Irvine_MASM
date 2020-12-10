@@ -34,15 +34,15 @@ main PROC
 
 	finit											; Initializes FPU stack.
 
-	call _initConsole								; call to _initConsole procedure
-	call _quadFormula								; call to _quadFormula procedure
+	call _initConsole									; call to _initConsole procedure
+	call _quadFormula									; call to _quadFormula procedure
 	call _close										; call to _close procedure
 
 main endp
 
 
 _close PROC
-	invoke ExitProcess, 0							; close down program
+	invoke ExitProcess, 0									; close down program
 _close endp
 
 END main
