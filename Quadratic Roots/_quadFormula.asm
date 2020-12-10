@@ -7,10 +7,10 @@ INCLUDE all.inc
 coeA			REAL4	0.0
 coeB			REAL4	0.0
 coeC			REAL4	0.0
-two				REAL4	2.0
+two			REAL4	2.0
 four			REAL4	4.0
 zero			Real4	0.0
-imaginaryNum	BYTE	"This polynomial has an imaginary root.",0
+imaginaryNum		BYTE	"This polynomial has an imaginary root.",0
 divideZero		BYTE	"A is 0, and you cannot divide by 0.", 0
 root1Text		BYTE	"Root 1: ",0
 root2Text		BYTE	"Root 2: ",0
@@ -44,8 +44,8 @@ _quadFormula PROC
 	sahf											; copy AH into EFLAGS
 	ja L1											; 
 	jb L1											; if A is less than or greater than 0 skip the cannot divide by 0 error
-	mov edx,OFFSET divideZero						; Move into edx register divideZero message
-	call WriteString								; write to console
+	mov edx,OFFSET divideZero								; Move into edx register divideZero message
+	call WriteString									; write to console
 	jmp _end										; jump to _end
 
 
@@ -107,22 +107,22 @@ _quadFormula PROC
 		
 		fld root1										; ST(0)=root1 and ST(1)=root2
 
-		mov edx, OFFSET root1Text						; move root1Text into edx
-		call WriteString								; display to console
-		call WriteFloat									; Write the float in ST(0) to console
+		mov edx, OFFSET root1Text								; move root1Text into edx
+		call WriteString									; display to console
+		call WriteFloat										; Write the float in ST(0) to console
 		fstp root1										; pop root1 back out of ST(0) now ST(0)=root2
 		call crlf										; new line
 
-		mov edx, OFFSET root2Text						; move root2Text into edx
-		call WriteString								; display to console
-		call WriteFloat									; Write the float in ST(0) to console
+		mov edx, OFFSET root2Text								; move root2Text into edx
+		call WriteString									; display to console
+		call WriteFloat										; Write the float in ST(0) to console
 		; -------------------------------------------------------------------------------------------------
 
 		jmp _end										; jump over imaginary num text
 
 	L2:
-		mov edx,OFFSET imaginaryNum						; move imaginaryNum into edx
-		call WriteString								; display to console
+		mov edx,OFFSET imaginaryNum								; move imaginaryNum into edx
+		call WriteString									; display to console
 
 	_end:
 		ret												; return to calling procedure
