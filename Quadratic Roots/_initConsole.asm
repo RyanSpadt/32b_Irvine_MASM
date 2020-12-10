@@ -3,7 +3,7 @@
 INCLUDE all.inc
 
 .data
-welcomeMsg		BYTE	"CPSC 232 - Assignment 8", 0						; Welcome Message
+welcomeMsg		BYTE	"CPSC 232 - Assignment 8", 0					; Welcome Message
 coeAtext		BYTE	"Coefficient (A) for Ax^2 + Bx + C: ", 0			; Text for coefficient A
 coeBtext		BYTE	"Coefficient (B) for Ax^2 + Bx + C: ", 0			; Text for coefficient B
 coeCtext		BYTE	"Coefficient (C) for Ax^2 + Bx + C: ", 0			; Text for coefficient C
@@ -22,20 +22,20 @@ coeCtext		BYTE	"Coefficient (C) for Ax^2 + Bx + C: ", 0			; Text for coefficient
 ; ***************************************************************************************
 _initConsole PROC
 
-	mov edx, OFFSET welcomeMsg						; move welcomeMsg into edx
+	mov edx, OFFSET welcomeMsg							; move welcomeMsg into edx
 	call WriteString								; display message1 to console
-	call crlf										; new line
-	call crlf										; new line
+	call crlf									; new line
+	call crlf									; new line
 
-	mov edx, OFFSET coeAtext						; move coeAtext into edx
-	call WriteString								; display message1 to console
-	call ReadFloat									; Read a float into ST(0)
-
-	mov edx, OFFSET coeBtext						; move coeAtext into edx
+	mov edx, OFFSET coeAtext							; move coeAtext into edx
 	call WriteString								; display message1 to console
 	call ReadFloat									; Read a float into ST(0)
 
-	mov edx, OFFSET coeCtext						; move coeAtext into edx
+	mov edx, OFFSET coeBtext							; move coeAtext into edx
+	call WriteString								; display message1 to console
+	call ReadFloat									; Read a float into ST(0)
+
+	mov edx, OFFSET coeCtext							; move coeAtext into edx
 	call WriteString								; display message1 to console
 	call ReadFloat									; Read a float into ST(0)
 
