@@ -20,8 +20,8 @@ it will tell the user A cannot be 0. If the root is an imaginary number it will 
 
 <b>Images:</b><br/>
  </p> 
- <img src="Quadratic Roots/imgs/pa-08-session-01.png">
+ <img src="https://github.com/RyanSpadt/MASM/blob/main/Quadratic%20Roots/imgs/pa-08-session-01.png">
  
- <img src="Quadratic Roots/imgs/pa-08-session-02.png">
+ <img src="https://github.com/RyanSpadt/MASM/blob/main/Quadratic%20Roots/imgs/pa-08-session-02.png">
  
- <img src="Quadratic Roots/imgs/pa-08-session-03.png">
+ <img src="https://github.com/RyanSpadt/MASM/blob/main/Quadratic%20Roots/imgs/pa-08-session-03.png">
